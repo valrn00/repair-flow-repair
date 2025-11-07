@@ -7,7 +7,18 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -f"
+  },
+  "gh-pages": {
+    "cname": "www.example.com",
+    "repo": "https://github.com/valrn00/repair-flow-repair.git",
+    "silent": true,
+    "remove": "dist",
+    "history": false,
+    "message": "Deployment: %message%",
+    "branch": "gh-pages"
   },
   "dependencies": {
     "react": "^19.1.1",
